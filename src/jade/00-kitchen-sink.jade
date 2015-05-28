@@ -1,0 +1,115 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Kitchen Sink | Ted Hosmer Enterprises
+    meta(name="description", content="Kitchen Sink | Ted Hosmer Enterprises")
+    include _head.jade
+
+  body#index
+    .container
+      include _header.jade
+      
+      section.hero.flexslider
+        ul.slides
+          li
+            img(src="images/carousel/slide-1.jpg", alt="")
+            h1.title Short Headline <br/> Goes Here
+            p.subtitle Short subheading goes here.
+          li
+            img(src="images/carousel/slide-2.jpg", alt="")
+            h1.title Oh Look <br/> More Words
+            p.subtitle Probably no more than 20 chars.
+          li
+            img(src="images/carousel/slide-3.jpg", alt="")
+            h1.title Very Headline <br/> Much Creative
+            p.subtitle This is a subheading.
+          li
+            img(src="images/carousel/slide-4.jpg", alt="")
+            h1.title Another short <br/> Headline
+            p.subtitle Shorter subhead here.
+        
+      section
+        .row
+          .columns.small-12
+            h2 Colors
+            ul.block-grid-medium-3.block-grid-large-6
+              li
+                .swatch.blue-bg
+                p #0071a1 (Pantone 641)
+              li
+                .swatch.medium-blue-bg
+                p #2c95b5 (Pantone 7459)
+              li
+                .swatch.light-blue-bg
+                p #c8e2ea (Pantone 7547)
+              li
+                .swatch.white-bg
+                p #fff
+              li
+                .swatch.grey-bg
+                p #656565
+              li
+                .swatch.light-grey-bg
+                p #9c9a9b
+        
+      section
+        .row
+          .columns.small-12
+            h2 Typography (this is an h2 tag)
+            p When creating content for the site <strong>never use the &lt;h1&gt; tag</strong>. Anything from &lt;h2&gt; - &lt;h6&gt; is valid. The &lt;p&gt; can be used as well.
+            hr
+            h3 Titles (this is an h3 tag)
+            h4 This is an h4 tag
+            h5 This is an h5 tag
+            h6 This is an h6 tag
+            hr
+            h3 Body
+            p This is a paragraph. Lorem ipsum doler sit amat.
+            ul
+              li This is an unordered list
+              li This is an unordered list
+              li This is an unordered list
+            dl
+              dt This is a definition list title
+              dd This is a definition list description
+              dt This is a definition list title
+              dd This is a definition list description
+              dt This is a definition list title
+              dd This is a definition list description
+      
+      section.white-bg
+        .row
+          .columns.small-12
+            h2 Buttons
+            button Button Text
+            p &lt;button&gt;Button Text&lt;button&gt;
+      
+      section#presetter.shaded-bg
+        .row
+          .columns.small-12
+            h2 section#presetter
+            
+            p(style="text-align:center") (This style only available in &lt;section id="presetter"&gt;)
+            
+            div.shaded-bg(style="height:300px;position:relative")
+              div.info-block(style="left:35%;top:100px;")
+                dl
+                  dt div.info-block dl dt
+                  dd
+                    p div.info-block dl dd p
+                    p div.info-block dl dd p
+                    p another p
+      
+      section#sign-up.shaded-bg
+        .row
+          .columns.small-12
+            h2 Form Elements
+            input(type="text", placeholder="Your name (input)")
+            textarea(placeholder="Comments (textarea)")
+            button(type="submit") Button
+
+      include _footer.jade
+
+    include _scripts.jade
