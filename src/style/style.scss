@@ -172,10 +172,23 @@ h3 {
 	color: $mediumblue;
 	font-style: italic;
 	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1;
+	margin-top: 0;
 }
 
 h4 {
 	font-variant: small-caps;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+p, table tr th, table tr td, button, a,
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"],
+select, textarea{
+	font-size: 1.25rem;
 }
 
 .dark-bg {
@@ -247,10 +260,6 @@ body, html {
 	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
 table {
 	border: 0;
 	width: 100%;
@@ -260,6 +269,7 @@ table {
 		th, td {
 			text-align: center;
 			padding: 1em;
+			color: $grey;
 		}
 		
 		th, .blue {
@@ -275,6 +285,20 @@ table {
 section {
 	margin-top: 4rem;
 	margin-bottom: 4rem;
+	
+	.row {
+		margin-bottom: 1rem;
+	}
+	
+	.intro-row {
+		margin-bottom: 3rem;
+	}
+}
+
+hr {
+	background-color: #4b8fb2;
+	border: 0;
+	height: 4rem;
 }
 
 #main-menu {
@@ -357,6 +381,24 @@ header.header {
 		width: 51%;
 		padding-top: 17.25%;
 		float: left;
+	}
+}
+
+.right-off-canvas-menu {
+	background-image: linear-gradient(-90deg, $blue, $mediumblue);
+	
+	nav {
+		padding: 1rem 1rem 1rem 2rem;
+		
+		ul {
+			list-style: none;
+			
+			li {
+				a {
+					color: #FFF;
+				}
+			}
+		}
 	}
 }
 
@@ -515,6 +557,7 @@ header.header {
 			font-style: italic;
 			color: $blue;
 			line-height: 1.1em;
+			font-size: 1.8rem;
 		}
 	}
 }
