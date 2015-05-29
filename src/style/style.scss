@@ -44,16 +44,20 @@ $lightgrey: #9c9a9b; $lightgray: $lightgrey;
 
 .flexslider {
 	border: 0;
+	border-radius: 0;
 	overflow: hidden;
 	
 	.slides {
-		/*li {
-			padding: 1em 0 4em;
-		}*/
+		li {
+			padding: 3em 0 6em;
+			background-size: cover;
+			background-position: top center;
+			background-repeat: no-repeat;
+		}
 	}
 	
 	.flex-control-nav {
-		bottom: 2em;
+		bottom: 3em;
 		z-index: 5;
 	}
 	
@@ -67,122 +71,39 @@ $lightgrey: #9c9a9b; $lightgray: $lightgrey;
 			background-color: rgba(255, 255, 255, 0.6);
 		}
 	}
-}
-
-
-// Typography
-
-h2 {
-	font-variant: small-caps;
-	color: $blue;
-}
-
-h3 {
-	color: $mediumblue;
-}
-
-h4 {
-	font-variant: small-caps;
-}
-
-
-// Buttons / Forms
-
-button {
-	background-color: $blue;
-	background-image: linear-gradient(0deg, $blue, $mediumblue);
-	transition: background-image .5s ease-in-out 0s;
-	color: #FFF;
-	padding: 1em 4em;
-	border-radius: .75em;
 	
-	&:focus, &:hover {
-		background-image: linear-gradient(0deg, $mediumblue, $blue);
-	}
-	
-	&:active {
-		transition: background-image .1s ease-in-out 0s;
-		background-image: linear-gradient(0deg, $lightblue, $mediumblue);
-	}
-}
-
-
-// Main / general styles
-
-body, html {
-	color: $grey;
-	background-color: #FFF;
-	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-#main-menu {
-	float: right;
-	list-style: none;
-	margin-top: 4rem;
-	
-	li {
-		float: left;
-		margin-left: 2rem;
-		font-size: 2rem;
-		
-		a {
-			color: #d8f3ff;
+	&.hero {
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 5;
+			top: 10%;
+			left: 10%;
+			display: block;
+			width: 34%;
+			height: 80%;
+			background-image: url(../images/carousel/floating-icons.png);
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
 		}
-	}
-}
-
-header.header, footer.footer {
-	color: #FFF;
-	z-index: 5; // so the :after blue bar is over other content
-	
-	a {
-		color: #FFF;
-	}
-}
-
-header.header {
-	position: relative;
-	background: linear-gradient(90deg, $mediumblue, $blue);
-	margin-bottom: 32px;
-	
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: -28px;
-		left: 0;
-		width: 100%;
-		border-top: 4px solid #FFF;
-		height: 28px;
-		border-radius: 0 0 28px 28px;
-		background: linear-gradient(90deg, $lightblue, $blue);
-	}
-}
-
-.hero {
-	margin-top: -28px;
-	
-	&.flexslider {
+		
 		.slides {
 			li {
+				padding: 6em 0 10em;
 				text-align: center;
-				
-				// VERY UGLY WAY TO POSITION TEXT
-				h1 { margin-top: -30rem; }
-				p { margin-bottom: 30rem; }
 				
 				h1 {
 					color: #FFF;
-					font-size: 5rem;
+					font-size: 4rem;
+					line-height: 1.1em;
 					text-shadow: 0 0 5px #000;
+					margin-bottom: 2rem;
 				}
 				
 				p {
 					color: #FFF;
-					font-size: 2.5rem;
+					font-size: 2rem;
 					text-shadow: 0 0 5px #000;
 				}
 				
@@ -206,6 +127,395 @@ header.header {
 				}
 			}
 		}
+		
+		.flex-control-nav {
+			left: 50%;
+			width: 40%;
+		}
+	}
+	
+	&.quoteslider {
+		.slides {
+			background-image: url(../images/carousel/blue-bg.jpg);
+			background-size: cover;
+			background-position: top center;
+			
+			li {
+				text-align: center;
+				
+				h2, p {
+					width: 75%;
+					margin: 1rem auto;
+					color: #FFF;
+				}
+				
+				button.read-more {
+					position: absolute;
+					bottom: 1em;
+					left: 70%;
+				}
+			}
+		}
+	}
+}
+
+
+// Typography
+
+h2 {
+	font-variant: small-caps;
+	color: $blue;
+	text-align: center;
+}
+
+h3 {
+	color: $mediumblue;
+	font-style: italic;
+	font-weight: 700;
+}
+
+h4 {
+	font-variant: small-caps;
+}
+
+.dark-bg {
+	background-color: $mediumblue;
+	color: #FFF;
+	padding: .5em;
+	text-align: center;
+	font-style: normal;
+	font-weight: 300;
+}
+
+
+// Buttons / Forms
+
+button {
+	background-color: $blue;
+	background-image: linear-gradient(0deg, $blue, $mediumblue);
+	transition: all .5s ease-in-out 0s;
+	color: #FFF;
+	padding: 1em 4em;
+	border-radius: .75em;
+	
+	&:focus, &:hover {
+		background-image: linear-gradient(0deg, $mediumblue, $blue);
+	}
+	
+	&:active {
+		transition: background-image .1s ease-in-out 0s;
+		background-image: linear-gradient(0deg, $lightblue, $mediumblue);
+	}
+	
+	&.light {
+		background-color: #4e90b3;
+		background-image: none;
+		
+		&:focus, &:hover, &:active {
+			background-color: $lightblue;
+			color: $blue;
+		}
+	}
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"],
+input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"],
+input[type="number"], input[type="search"], input[type="tel"], input[type="time"],
+input[type="url"], input[type="color"],
+select, textarea {
+	background-color: $lightgrey;
+	color: #FFF;
+	border: 0;
+	border-radius: .75em;
+	
+	&:focus, &:hover {
+		background-color: $grey;
+	}
+	
+	&:focus {
+		box-shadow: inset 0 0 3px #000;
+	}
+}
+
+
+
+// Main / general styles
+
+body, html {
+	color: $grey;
+	background-color: #FFF;
+	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+table {
+	border: 0;
+	width: 100%;
+	background: none;
+	
+	tr {
+		th, td {
+			text-align: center;
+			padding: 1em;
+		}
+		
+		th, .blue {
+			color: $blue;
+		}
+	}
+	
+	tr.even, tr.alt, tr:nth-of-type(2n) {
+		background: none;
+	}
+}
+
+section {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+#main-menu {
+	float: right;
+	list-style: none;
+	margin-top: 4rem;
+	
+	li {
+		float: left;
+		margin-left: 2rem;
+		font-size: 1.25rem;
+		
+		a {
+			color: #d8f3ff;
+			
+			&:hover, &:active {
+				color: #FFF;
+			}
+		}
+		
+		.right-off-canvas-toggle {
+			text-indent: -9999em;
+			display: block;
+			height: 1.5em;
+			border-top: .3em solid #FFF;
+			border-bottom: .3em solid #FFF;
+			width: 2em;
+			position: relative;
+			margin-top: -1.5em;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				height: .3em;
+				width: 2em;
+				background-color: #FFF;
+				top: .45em;
+				margin-top: -.15em;
+			}
+		}
+	}
+}
+
+header.header, footer.footer {
+	color: #FFF;
+	z-index: 5; // so the :after blue bar is over other content
+	
+	a {
+		color: #FFF;
+	}
+}
+
+header.header {
+	position: relative;
+	background: linear-gradient(90deg, $mediumblue, $blue);
+	margin-bottom: 32px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -28px;
+		left: 0;
+		width: 100%;
+		border-top: 4px solid #FFF;
+		height: 28px;
+		border-radius: 0 0 28px 28px;
+		background: linear-gradient(90deg, $lightblue, $blue);
+	}
+	
+	.logo {
+		width: 45%;
+		margin-right: 4%;
+		float: left;
+	}
+	
+	.tagline {
+		width: 51%;
+		padding-top: 17.25%;
+		float: left;
+	}
+}
+
+.secondary-menu {
+	padding: 1rem;
+	background-color: #4d4b4c;
+	border-top: 1px solid $lightblue;
+	margin-bottom: 6rem;
+	
+	h1 {
+		line-height: .8em;
+		font-weight: 300;
+		font-variant: small-caps;
+		
+		a {
+			display: inline-block;
+		}
+	}
+	
+	a {
+		color: #FFF;
+		position: relative;
+		
+		&.active {
+			&:after {
+				content: "";
+				display: block;
+				height: 2px;
+				width: 100%;
+				background-color: $lightblue;
+				margin-top: .1em;
+			}
+		}
+	}
+	
+	#secondary-menu {
+		float: right;
+		margin-top: .6rem;
+		
+		li {
+			float: left;
+			margin-left: 2.25em;
+			list-style: none;
+			
+			a {
+				font-size: 1.3rem;
+				font-weight: 300;
+				
+				&:before {
+					position: absolute;
+					left: -1em;
+					top: .45em;
+					content: "";
+					width: .4em;
+					height: .4em;
+					border-radius: 100%;
+					background: #FFF;
+				}
+			}
+			
+			&:first-child {
+				a {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.hero { // .hero is right under the header
+	margin-top: -28px;
+	min-height: 264px;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 70%;
+		z-index: 1; // Over the background image, below the copy
+		opacity: .6;
+		background-image: linear-gradient(180deg, $blue, rgba(0, 113, 116, 0));
+	}
+}
+
+.round-corners {
+	border-radius: 2em;
+}
+
+.light-bg {
+	background: linear-gradient(0deg, #f3f8fb, $lightblue);
+	position: relative;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -28px;
+		left: 0;
+		width: 100%;
+		border-top: 4px solid #FFF;
+		height: 28px;
+		border-radius: 0 0 28px 28px;
+		background: linear-gradient(90deg, $lightblue, $blue);
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: -28px;
+		left: 0;
+		width: 100%;
+		border-bottom: 4px solid #FFF;
+		height: 28px;
+		border-radius: 28px 28px 0 0;
+		background: linear-gradient(90deg, $blue, $lightblue);
+	}
+}
+
+.text-module {
+	margin-top: 4em;
+	margin-bottom: 4em;
+	
+	text-align: center;
+	
+	h2 {
+		margin-top: 0;
+	}
+	
+	p {
+		text-align: left;
+	}
+	
+	img {
+		border-radius: 2em;
+	}
+}
+
+.job-postings {
+	.sign-up {
+		h3 {
+			font-style: italic;
+			color: $blue;
+			line-height: 1.1em;
+		}
 	}
 }
 
@@ -224,5 +534,55 @@ footer.footer {
 		height: 28px;
 		border-radius: 28px 28px 0 0;
 		background: linear-gradient(90deg, $blue, $lightblue);
+	}
+}
+
+.social-icon {
+	list-style: none;
+	float: left;
+	margin-right: 1rem;
+	
+	a {
+		display: block;
+		font-size: 3rem;
+		border: .08em solid #FFF;
+		width: 2em;
+		height: 2em;
+		text-indent: -9999em;
+		background-image: radial-gradient(circle at center, #FFF, $mediumblue);
+		border-radius: 100%;
+		
+		&:after {
+			color: $blue;
+			font-style: italic;
+			font-weight: 700;
+		}
+	}
+	
+	&.social-facebook {
+		a:after {
+			content: "f";
+		}
+	}
+	
+	&.social-twitter {
+		a:after {
+			content: "t";
+		}
+	}
+	
+	&.social-linkedin {
+		a:after {
+			content: "in";
+		}
+	}
+}
+
+
+// Page specific styles
+body#about {
+	.hero {
+		background-image: url(../images/carousel/slide-1.jpg);
+		
 	}
 }

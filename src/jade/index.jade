@@ -8,16 +8,93 @@ html(lang="en").no-js
     include _head.jade
 
   body#index
-    a(href="#main").visuallyhidden Skip to main content
-    .container
-    include _header
+    .off-canvas-wrap("data-offcanvas")
+      .inner-wrap
+        a(href="#main").visuallyhidden Skip to main content
+        .container
+          include _header
+          
+          .hero.flexslider
+            ul.slides
+              li(style="background-image: url(images/carousel/slide-1.jpg)")
+                h1.title Short Headline <br/> Goes Here
+                p.subtitle Short subheading goes here.
+              li(style="background-image: url(images/carousel/slide-2.jpg)")
+                h1.title Oh Look <br/> More Words
+                p.subtitle No more than 25 chars.
+              li(style="background-image: url(images/carousel/slide-3.jpg)")
+                h1.title Very Headline <br/> Much Creative
+                p.subtitle This is a subheading.
+              li(style="background-image: url(images/carousel/slide-4.jpg)")
+                h1.title Another short <br/> Headline
+                p.subtitle Shorter subhead here.
+          
+          section
+            .row.text-module
+              .columns.medium-4
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-8
+                h2 Headline Goes Here
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                button(href="#") Button Title Goes Here
+            
+            .row.text-module
+              .columns.medium-8
+                h2 Headline Goes Here
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                button(href="#") Button Title Goes Here
+              .columns.medium-4
+                img.round-corners(src="images/stock-square.jpg", alt="")
+          
+          section.flexslider.quoteslider
+            ul.slides
+              li
+                h2 Headline Goes Here
+                p.quote ÒNullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla.Ó  ¥  Source
+                button.read-more.light(a href="#") Read More
+              li
+                h2 Headline Goes Here
+                p.quote ÒPhasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla. Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas.Ó  ¥  Source
+                button.read-more.light(a href="#") Read More
+              li
+                h2 Headline Goes Here
+                p.quote ÒNullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla.Ó  ¥  Source
+                button.read-more.light(a href="#") Read More
+              li
+                h2 Headline Goes Here
+                p.quote ÒCurabitur bibendum massa nec gravida egestas. Nullam mattis convallis ultricies. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla.Ó  ¥  Source
+                button.read-more.light(a href="#") Read More
+          
+          section.job-postings
+            .row
+              .columns.small-12
+                h2 Latest Job Postings
+                
+                table
+                  tr
+                    td.blue Field area
+                    td Job Title Goes Here
+                    td Temporary
+                    td Apr 2, 2015
+                  tr
+                    td.blue Field area
+                    td Job Title Goes Here
+                    td Direct Hire
+                    td Apr 2, 2015
+                  tr
+                    td.blue Field area
+                    td Job Title Goes Here
+                    td Temporary
+                    td Apr 2, 2015
+                  tr
+                    td.blue Field area
+                    td Job Title Goes Here
+                    td Direct Hire
+                    td Apr 2, 2015
+            
+            include _job_postings_signup
+          
+          a.exit-off-canvas
+          include _footer
     
-    section#main
-      .row
-        .columns.small-12.medium-6.medium-offset-1.large-5.large-offset-0
-          h1 Intro copy
-          p Let this entry level bench mounted Tool Measuring Machine be the beginning of your process. The Origin is designed to provide basic video tool measuring and inspection functionality at an economical price.
-          button(href="#signup") Free Trial
-    
-    include _footer
     include _scripts.jade
