@@ -1,0 +1,57 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Jobs | sPoint Partners
+    meta(name="description", content="sPoint Partners")
+    include _head.jade
+
+  body#jobs
+    .off-canvas-wrap("data-offcanvas")
+      .inner-wrap
+        a(href="#main").visuallyhidden Skip to main content
+        .container
+          include _header
+          
+          .hero
+          
+          .secondary-menu
+            .row
+              h1.h1.columns.medium-3
+                a(href="/jobs.html") Jobs
+          
+              
+          section
+            .row.intro-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h2 Why sPoint Partners?
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+          
+          section
+            .row.member-sign-in
+              .columns.small-12.medium-offset-1.medium-10
+                .row
+                  .columns.small-12.medium-3
+                    h3 Member sign in
+                  .columns.small-12.medium-9
+                    input(type="email", name="email", placeholder="Your Username")
+                    input(type="text", name="email", placeholder="Your Password")
+                    button(type="submit").right Submit
+            
+            .row.create-account
+              .columns.small-12.medium-offset-1.medium-10
+                .row
+                  .columns.small-12.medium-3
+                    h3 Create an Account
+                  .columns.small-12.medium-9
+                    input(type="email", name="email", placeholder="Your Username")
+                    input(type="text", name="email", placeholder="Your Password")
+                    button(type="submit").right Submit
+          
+          a.exit-off-canvas
+          include _footer
+    
+    include _scripts.jade

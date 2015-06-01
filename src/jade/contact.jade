@@ -1,0 +1,71 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Contact | sPoint Partners
+    meta(name="description", content="sPoint Partners")
+    include _head.jade
+
+  body#contact
+    .off-canvas-wrap("data-offcanvas")
+      .inner-wrap
+        a(href="#main").visuallyhidden Skip to main content
+        .container
+          include _header
+          
+          .hero
+          
+          section.contact-list
+            .row.contact-module
+              .columns.medium-8.large-9
+                h4 sPoint Office, City
+                address 1234 Main St <br/> City, ST, 12345 <br/>
+                a.phone(href="tel:1-888-888-8888") <strong>M</strong> 1-888-888-8888 <br/>
+                a.fax(href="tel:1-888-888-8888") <strong>F</strong> 1-888-888-8888 <br/>
+                a.email(href="mailto:email@spointpartners.com") email@sPointPartners.com
+              .columns.medium-4.large-3
+                img.round-corners.blue-border(src="images/stock-square.jpg", alt="")
+            .row.contact-module
+              .columns.medium-8.large-9
+                h4 sPoint Office, City
+                address 1234 Main St <br/> City, ST, 12345 <br/>
+                a.phone(href="tel:1-888-888-8888") <strong>M</strong> 1-888-888-8888 <br/>
+                a.fax(href="tel:1-888-888-8888") <strong>F</strong> 1-888-888-8888 <br/>
+                a.email(href="mailto:email@spointpartners.com") email@sPointPartners.com
+              .columns.medium-4.large-3
+                img.round-corners.blue-border(src="images/stock-square.jpg", alt="")
+            .row.contact-module
+              .columns.medium-8.large-9
+                h4 sPoint Office, City
+                address 1234 Main St <br/> City, ST, 12345 <br/>
+                a.phone(href="tel:1-888-888-8888") <strong>M</strong> 1-888-888-8888 <br/>
+                a.fax(href="tel:1-888-888-8888") <strong>F</strong> 1-888-888-8888 <br/>
+                a.email(href="mailto:email@spointpartners.com") email@sPointPartners.com
+              .columns.medium-4.large-3
+                img.round-corners.blue-border(src="images/stock-square.jpg", alt="")
+          
+          section.send-a-message
+            form.row
+              .columns.medium-2
+                h3 Send Us a Message
+              .columns.medium-10
+                input(type="text", name="name", placeholder="Your Name")
+                input(type="email", name="email", placeholder="Your Email")
+                
+                input(type="text", name="city", placeholder="City", style="width: 40%; display: inline-block")
+                select(name="state", style="width: 30%")
+                  option(value="") State
+                  option(value="option") Option 1
+                  option(value="option") Option 2
+                  option(value="option") Option 3
+                  option(value="option") Option 4
+                input(type="text", name="zip", placeholder="Zip", style="width: 15%; display: inline-block")
+                
+                textarea(placeholder="Message", name="message", style="height: 6rem; display: inline-block")
+                button.right(type="submit") Submit
+          
+          a.exit-off-canvas
+          include _footer
+    
+    include _scripts.jade

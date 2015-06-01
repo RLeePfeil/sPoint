@@ -1,3 +1,4 @@
 assets/
 build/
 src/node_modules
+src/style/.sass-cache

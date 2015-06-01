@@ -1,0 +1,108 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Company Bios | sPoint Partners
+    meta(name="description", content="sPoint Partners")
+    include _head.jade
+
+  body#company-bios
+    .off-canvas-wrap("data-offcanvas")
+      .inner-wrap
+        a(href="#main").visuallyhidden Skip to main content
+        .container
+          include _header
+          
+          .hero
+          
+          .secondary-menu
+            .row
+              h1.h1.columns.medium-3
+                a(href="/about.html") About
+          
+              nav.nav.columns.medium-9(role="navigation")
+                
+                ul#secondary-menu.main-nav
+                  li
+                    a(href="news.html") News
+                  li
+                    a.active(href="company_bios.html") Company Bios
+                  li
+                    a(href="recommendations.html") Recommendations
+                  li
+                    a(href="careers.html") Careers at sPoint
+          
+          
+          section.company-bios
+          
+            h2 Company Bios
+          
+            .row.bio-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h4 John Smith
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                  a(href="") <strong>Linked In</strong>
+            .row.bio-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h4 John Smith
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                  a(href="") <strong>Linked In</strong>
+            .row.bio-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h4 John Smith
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                  a(href="") <strong>Linked In</strong>
+            .row.bio-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h4 John Smith
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                  a(href="") <strong>Linked In</strong>
+            .row.bio-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h4 John Smith
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                  a(href="") <strong>Linked In</strong>
+            .row.bio-row
+              .columns.medium-3
+                img.round-corners(src="images/stock-square.jpg", alt="")
+              .columns.medium-9
+                h4 John Smith
+                p Nullam mattis convallis ultricies. Curabitur bibendum massa nec gravida egestas. Phasellus eu imperdiet odio. Donec dignissim feugiat laoreet. Donec posuere vel sapien ut consequat. Etiam nec odio maximus, rhoncus risus vel, nulla eu imperdiet odio.
+                  a(href="") <strong>Linked In</strong>
+            
+          section
+            form.row.member-sign-in
+              .columns.small-12.medium-offset-1.medium-10
+                .row
+                  .columns.small-12.medium-3
+                    h3 Member sign in
+                  .columns.small-12.medium-9
+                    input(type="email", name="email", placeholder="Your Username")
+                    input(type="text", name="email", placeholder="Your Password")
+                    button(type="submit").right Submit
+            
+            form.row.create-account
+              .columns.small-12.medium-offset-1.medium-10
+                .row
+                  .columns.small-12.medium-3
+                    h3 Create an Account
+                  .columns.small-12.medium-9
+                    input(type="email", name="email", placeholder="Your Username")
+                    input(type="text", name="email", placeholder="Your Password")
+                    button(type="submit").right Submit
+          
+          a.exit-off-canvas
+          include _footer
+    
+    include _scripts.jade

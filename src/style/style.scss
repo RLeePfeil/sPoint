@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Proxima Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-p, table tr th, table tr td, button, a,
+p, table tr th, table tr td, button,
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"],
 select, textarea{
 	font-size: 1.25rem;
@@ -210,6 +210,7 @@ button {
 	color: #FFF;
 	padding: 1em 4em;
 	border-radius: .75em;
+	margin-top: 1rem;
 	
 	&:focus, &:hover {
 		background-image: linear-gradient(0deg, $mediumblue, $blue);
@@ -240,6 +241,10 @@ select, textarea {
 	color: #FFF;
 	border: 0;
 	border-radius: .75em;
+	
+	padding: 0 1.5rem;
+	height: 3rem;
+	margin-bottom: .25rem;
 	
 	&:focus, &:hover {
 		background-color: $grey;
@@ -301,15 +306,35 @@ hr {
 	height: 4rem;
 }
 
+body#about #main-menu li.menu-li-about {
+	background-image: linear-gradient(0deg, #71B1CB, #2c95b5);
+}
+
+body#contact #main-menu li.menu-li-contact {
+	background-image: linear-gradient(0deg, #71B1CB, #2c95b5);
+}
+
+body#jobs #main-menu li.menu-li-jobs {
+	background-image: linear-gradient(0deg, #71B1CB, #2c95b5);
+}
+
+body#about #main-menu li.menu-li-about {
+	background-image: linear-gradient(0deg, #71B1CB, #2c95b5);
+}
+
 #main-menu {
 	float: right;
 	list-style: none;
-	margin-top: 4rem;
+	margin: -1rem 0;
 	
 	li {
 		float: left;
-		margin-left: 2rem;
+		padding: 4.5rem 1rem 1.75rem;
 		font-size: 1.25rem;
+		
+		&.active {
+			background-image: linear-gradient(0deg, #71B1CB, #2c95b5);
+		}
 		
 		a {
 			color: #d8f3ff;
@@ -354,7 +379,7 @@ header.header, footer.footer {
 
 header.header {
 	position: relative;
-	background: linear-gradient(90deg, $mediumblue, $blue);
+	background: linear-gradient(0deg, $blue, $mediumblue);
 	margin-bottom: 32px;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -499,6 +524,10 @@ header.header {
 	border-radius: 2em;
 }
 
+.blue-border {
+	border: 4px solid $mediumblue;
+}
+
 .light-bg {
 	background: linear-gradient(0deg, #f3f8fb, $lightblue);
 	position: relative;
@@ -551,6 +580,15 @@ header.header {
 	}
 }
 
+.bio-row {
+	a strong {
+		font-weight: 700;
+		font-style: italic;
+		display: inline-block;
+		margin-left: 1em;
+	}
+}
+
 .job-postings {
 	.sign-up {
 		h3 {
@@ -566,6 +604,8 @@ footer.footer {
 	background: linear-gradient(0deg, $blue, $blue, #4b8eb4);
 	position: relative;
 	margin-top: 32px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	
 	&:after {
 		content: "";
@@ -580,10 +620,25 @@ footer.footer {
 	}
 }
 
+.footer-contact-list {
+	list-style: none;
+	font-size: 1.45rem;
+	margin-bottom: 1em;
+	
+	li {
+		line-height: 1.2em
+	}
+}
+
+.footer-social-list {
+	float: right;
+	margin-top: 1rem;
+}
+
 .social-icon {
 	list-style: none;
 	float: left;
-	margin-right: 1rem;
+	margin-left: 1rem;
 	
 	a {
 		display: block;
@@ -594,11 +649,23 @@ footer.footer {
 		text-indent: -9999em;
 		background-image: radial-gradient(circle at center, #FFF, $mediumblue);
 		border-radius: 100%;
+		position: relative;
 		
 		&:after {
 			color: $blue;
 			font-style: italic;
-			font-weight: 700;
+			font-weight: 500;
+			font-size: 4.5rem;
+			text-indent: 0;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			text-align: center;
+			height: 1.2em;
+			line-height: 1.2em;
 		}
 	}
 	
@@ -626,6 +693,27 @@ footer.footer {
 body#about {
 	.hero {
 		background-image: url(../images/carousel/slide-1.jpg);
+		
+	}
+}
+
+body#jobs {
+	.hero {
+		background-image: url(../images/carousel/slide-2.jpg);
+		
+	}
+}
+
+body#company-bios {
+	.hero {
+		background-image: url(../images/carousel/slide-3.jpg);
+		
+	}
+}
+
+body#contact {
+	.hero {
+		background-image: url(../images/carousel/slide-4.jpg);
 		
 	}
 }
