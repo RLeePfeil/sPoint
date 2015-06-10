@@ -1,0 +1,108 @@
+footer.footer {
+	background: linear-gradient(0deg, $blue, $blue, #4b8eb4);
+	position: relative;
+	margin-top: 32px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	color: #FFF;
+	z-index: 5; // so the :after blue bar is over other content
+	
+	a {
+		color: #FFF;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: -28px;
+		left: 0;
+		width: 100%;
+		border-bottom: 4px solid #FFF;
+		height: 28px;
+		border-radius: 28px 28px 0 0;
+		background: linear-gradient(90deg, $blue, $lightblue);
+	}
+}
+
+.footer-contact-list {
+	list-style: none;
+	font-size: 1.45rem;
+	margin-bottom: 1em;
+	
+	li {
+		line-height: 1.2em
+	}
+}
+
+.footer-social-list {
+	margin-top: 1rem;
+	text-align: center;
+	
+	@include mq(netbook) {
+		float: right;
+	}
+}
+
+.social-icon {
+	list-style: none;
+	display: inline-block;
+	margin-left: 1em;
+	margin-right: 1em;
+	
+	@include mq(netbook) {
+		float: left;
+		margin-right: 0;
+	}
+	
+	a {
+		display: block;
+		border: .08em solid #FFF;
+		width: 2em;
+		height: 2em;
+		text-indent: -9999em;
+		background-image: radial-gradient(circle at center, #FFF, $mediumblue);
+		border-radius: 100%;
+		position: relative;
+		font-size: 2rem;
+		
+		@include mq(netbook) {
+			font-size: 3rem;
+		}
+		
+		&:after {
+			color: $blue;
+			font-style: italic;
+			font-weight: 500;
+			//font-size: 4.5rem;
+			font-size: 1.5em;
+			text-indent: 0;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			text-align: center;
+			height: 1.2em;
+			line-height: 1.2em;
+		}
+	}
+	
+	&.social-facebook {
+		a:after {
+			content: "f";
+		}
+	}
+	
+	&.social-twitter {
+		a:after {
+			content: "t";
+		}
+	}
+	
+	&.social-linkedin {
+		a:after {
+			content: "in";
+		}
+	}
+}

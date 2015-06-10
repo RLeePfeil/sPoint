@@ -1,4 +1,6 @@
 assets/
 build/
 src/node_modules
-src/style/.sass-cache
+**/.sass-cache
+**/.sass-cache/*
+**/.DS_STORE
