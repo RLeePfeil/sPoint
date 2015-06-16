@@ -101,6 +101,8 @@
 					text-shadow: 0 0 5px #000;
 					margin-bottom: 2rem;
 					font-size: 2.5rem;
+					font-family: $font-family-headline;
+					font-weight: 500;
 					
 					@include mq(netbook) {
 						font-size: 4rem;
@@ -164,10 +166,12 @@
 					color: #FFF;
 				}
 				
-				button.read-more {
-					position: absolute;
-					bottom: 1em;
-					left: 70%;
+				@include mq(netbook) {
+					button.read-more {
+						position: absolute;
+						bottom: 1em;
+						left: 70%;
+					}
 				}
 			}
 		}
@@ -259,6 +263,13 @@ select, textarea {
 	color: #FFF;
 	border: 0;
 	border-radius: .75em;
+	appearance: none;
+	-moz-appearance: none;
+	
+	&::placeholder {
+		color: #FFF;
+		opacity: 1;
+	}
 	
 	padding: 0 1.5rem;
 	height: 3rem;
@@ -266,6 +277,7 @@ select, textarea {
 	
 	&:focus, &:hover {
 		background-color: $grey;
+		outline: none;
 	}
 	
 	&:focus {
@@ -305,9 +317,40 @@ table {
 	}
 }
 
+.row {
+	max-width: 85rem; // Max of 1360px
+}
+
+@include mq(netbook) {
+	header.header, footer.footer {
+		.row {
+			max-width: 100rem; // Max of 1600px
+			padding-left: 4rem; // Padding of ~66px
+			padding-right: 4rem;
+		}
+	}
+}
+
+@include mq(desktop) {
+	.row {
+		padding-left: 8rem;
+		padding-right: 8rem;
+		
+		.row {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
 section {
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	
+	@include mq(netbook) {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
 	
 	.row {
 		margin-bottom: 1rem;
@@ -324,8 +367,30 @@ hr {
 	height: 4rem;
 }
 
+li.hr {
+	background-color: #fff;
+	height: 1px;
+	margin: 1em auto;
+}
+
 .center {
 	text-align: center;
+}
+
+.visible-netbook {
+	display: inherit;
+	
+	@include mq(netbook) {
+		display: none;
+	}
+}
+
+.hidden-netbook {
+	display: none;
+	
+	@include mq(netbook) {
+		display: inherit;
+	}
 }
 
 

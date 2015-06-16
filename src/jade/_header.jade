@@ -1,21 +1,21 @@
 header.header(role="banner")
   .header.row
-    h1.h1.columns.small-4.medium-5
+    h1.h1.columns.small-8.medium-3.large-5
       a(href="/")
         img(src="images/logos/spoint.png", alt="sPoint Partners").logo
         img(src="images/logos/tagline.png", alt="Specialized. Strategic. Search.").tagline
         span.visuallyhidden sPoint Partners - Specialized. Strategic. Search.
 
-    nav.nav.columns.small-8.medium-7(role="navigation")
+    nav.nav.columns.small-4.medium-9.large-7(role="navigation")
       
       ul#main-menu.main-nav
-        li.menu-li-about
+        li.menu-li-about.hidden-netbook
           a(href="about.html") About
-        li.menu-li-jobs
+        li.menu-li-jobs.hidden-netbook
           a(href="jobs.html") Jobs
-        li.menu-li-contact
+        li.menu-li-contact.hidden-netbook
           a(href="contact.html") Contact
-        li.menu-li-sign-in
+        li.menu-li-sign-in.hidden-netbook
           a(href="sign-in.html") Sign In
         li.menu-li-menu
           a(href="#right-off-canvas-menu", role="button", class="right-off-canvas-toggle") Menu
@@ -23,6 +23,17 @@ header.header(role="banner")
 aside#right-off-canvas-menu.right-off-canvas-menu
   nav
     ul#off-canvas-nav
+      li.menu-li-about.visible-netbook
+        a(href="about.html") About
+      li.menu-li-jobs.visible-netbook
+        a(href="jobs.html") Jobs
+      li.menu-li-contact.visible-netbook
+        a(href="contact.html") Contact
+      li.menu-li-sign-in.visible-netbook
+        a(href="sign-in.html") Sign In
+      
+      li.hr.visible-netbook
+      
       li
         a(href="#") Link
       li

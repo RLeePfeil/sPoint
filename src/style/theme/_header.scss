@@ -7,6 +7,10 @@ header.header {
 	color: #FFF;
 	z-index: 5; // so the :after blue bar is over other content
 	
+	h1 {
+		margin: 0;
+	}
+	
 	a {
 		color: #FFF;
 	}
@@ -24,15 +28,15 @@ header.header {
 	}
 	
 	.logo {
-		width: 45%;
+		max-width: 307px;
 		margin-right: 4%;
-		float: left;
+		width: 45%;
 	}
 	
 	.tagline {
-		width: 51%;
+		max-width: 361px;
 		padding-top: 17.25%;
-		float: left;
+		width: 51%;
 	}
 }
 
@@ -59,8 +63,12 @@ body#about #main-menu li.menu-li-about {
 	
 	li {
 		float: left;
-		padding: 4.5rem 1rem 1.75rem;
+		padding: 3.75rem 1rem 1.75rem;
 		font-size: 1.25rem;
+		
+		@include mq(netbook) {
+			padding-top: 5.75rem;
+		}
 		
 		&.active {
 			background-image: linear-gradient(0deg, #71B1CB, #2c95b5);
@@ -120,7 +128,10 @@ body#about #main-menu li.menu-li-about {
 	padding: 1rem;
 	background-color: #4d4b4c;
 	border-top: 1px solid $lightblue;
-	margin-bottom: 6rem;
+	
+	@include mq(netbook) {
+		margin-bottom: 6rem;
+	}
 	
 	h1 {
 		line-height: .8em;
@@ -150,7 +161,10 @@ body#about #main-menu li.menu-li-about {
 	
 	#secondary-menu {
 		float: right;
-		margin-top: .6rem;
+		
+		@include mq(netbook) {
+			margin-top: .6rem;
+		}
 		
 		li {
 			float: left;
@@ -158,18 +172,22 @@ body#about #main-menu li.menu-li-about {
 			list-style: none;
 			
 			a {
-				font-size: 1.3rem;
 				font-weight: 300;
+				font-size: 1.1rem;
 				
-				&:before {
-					position: absolute;
-					left: -1em;
-					top: .45em;
-					content: "";
-					width: .4em;
-					height: .4em;
-					border-radius: 100%;
-					background: #FFF;
+				@include mq(netbook) {
+					font-size: 1.3rem;
+					
+					&:before {
+						position: absolute;
+						left: -1em;
+						top: .45em;
+						content: "";
+						width: .4em;
+						height: .4em;
+						border-radius: 100%;
+						background: #FFF;
+					}
 				}
 			}
 			
@@ -181,5 +199,92 @@ body#about #main-menu li.menu-li-about {
 				}
 			}
 		}
+	}
+}
+
+@include mq(tablet) {
+	header.header {
+		.logo {
+			width: 131px;
+			float: left;
+		}
+		
+		.tagline {
+			width: 131px;
+			padding-top: 51px;
+			float: left;
+		}
+	}
+}
+
+@include mq(small) {
+	header.header {
+		.logo {
+			
+		}
+		
+		.tagline {
+			padding-top: 0.6rem;
+		}
+	}
+}
+
+@include mq(netbook) {
+	header.header {
+		.logo {
+			margin-right: 0;
+			padding-top: 1rem;
+		}
+		
+		.tagline {
+			
+		}
+	}
+}
+
+@include mq(desktop) {
+	header.header {
+		.logo {
+			margin-right: 1rem;
+			padding-top: 1rem;
+			width: 168px;
+		}
+		
+		.tagline {
+			padding-top: 83px;
+			width: 157px;
+		}
+	}
+	
+	#main-menu li {
+		padding-top: 5.25rem;
+	}
+}
+
+@include mq(desktop-hd) {
+	header.header {
+		h1 {
+			width: 58.3333%; // large-7
+		}
+		
+		nav {
+			width: 41.6667%; // large-5
+		}
+		
+		.logo {
+			padding-top: 0;
+			width: 307px;
+		}
+		
+		.tagline {
+			padding-top: 118px;
+			width: 361px;
+		}
+	}
+	
+	#main-menu li {
+		font-size: 1.5rem;
+		padding-top: 8.1rem;
+		padding-bottom: 2.25rem;
 	}
 }
